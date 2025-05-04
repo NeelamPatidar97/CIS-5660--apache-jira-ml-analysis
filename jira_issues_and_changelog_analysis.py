@@ -18,9 +18,9 @@ def clean_column_names(df: DataFrame) -> DataFrame:
     return df
 
 # Load CSVs from HDFS
-issues_df = spark.read.option("header", True).option("inferSchema", True).option("multiLine", True).option("escape", "\"").csv("/user/npatida/Apache_JIRA_Issues/issues.csv")
-changelog_df = spark.read.option("header", True).option("inferSchema", True).option("multiLine", True).option("escape", "\"").csv("/user/npatida/Apache_JIRA_Issues/changelog.csv")
-comments_df = spark.read.option("header", True).option("inferSchema", True).option("multiLine", True).option("escape", "\"").csv("/user/npatida/Apache_JIRA_Issues/comments.csv")
+issues_df = spark.read.option("header", True).option("inferSchema", True).option("multiLine", True).option("escape", "\"").csv("/user/your_username/Apache_JIRA_Issues/issues.csv")
+changelog_df = spark.read.option("header", True).option("inferSchema", True).option("multiLine", True).option("escape", "\"").csv("/user/your_username/Apache_JIRA_Issues/changelog.csv")
+comments_df = spark.read.option("header", True).option("inferSchema", True).option("multiLine", True).option("escape", "\"").csv("/user/your_username/Apache_JIRA_Issues/comments.csv")
 
 # Clean column names
 issues_df = clean_column_names(issues_df)
