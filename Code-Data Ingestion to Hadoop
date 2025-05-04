@@ -1,0 +1,13 @@
+scp C:/Users/your_username/Apache_JIRA_Issues.zip ssh your_username@server:~
+
+ssh your_username@server
+password: 
+
+ls
+unzip Apache_JIRA_Issues.zip -d Apache_JIRA_Issues
+ls Apache_JIRA_Issues
+
+hdfs dfs -mkdir /user/your_username/Apache_JIRA_Issues
+hdfs dfs -mkdir -p /user/your_username/Apache_JIRA_Issues
+hdfs dfs -put Apache_JIRA_Issues/*.csv /user/your_username/Apache_JIRA_Issues/
+hdfs dfs -ls /user/your_username/Apache_JIRA_Issues
